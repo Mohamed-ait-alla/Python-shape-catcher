@@ -1,5 +1,6 @@
 from turtle import Screen, Turtle
 from bar import Bar
+from scope import Scope
 
 # window setup
 screen = Screen()
@@ -8,6 +9,7 @@ screen.setup(800, 500)
 screen.bgcolor("black")
 screen.tracer(0)
 
+scope = Scope()
 bar = Bar()
 
 # event handling
