@@ -10,7 +10,9 @@ class Bar(Turtle):
         self.goto(0, -170)
     
     def move_bar_to_right(self):
-        self.goto(self.xcor() + 20, self.ycor())
+        if (self.xcor() != 300):
+            self.goto(self.xcor() + 20, self.ycor())
     
     def move_bar_to_left(self):
-        self.goto(self.xcor() - 20, self.ycor())
+        if (self.xcor() != -300):
+            self.goto(self.xcor() - 20, self.ycor())
