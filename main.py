@@ -25,21 +25,22 @@ screen.onkey(bar.move_bar_to_left, "Left")
 # global variables
 game_on = True
 points = 0
+default_spead = 0.1
 
 
 while game_on:
     screen.update()
-    time.sleep(0.1)
+    time.sleep(default_spead)
     shape.go_down()
     # when a shape goes arround generate another one
     if (shape.ycor() < -190):
         shape.generate_shapes()
-    # check if a shape touch the bar
+    # when the shape touch the bar
     if (bar.distance(shape) <= 40 and shape.ycor() <= -155):
         score.is_touched = True
         shape_type = shape.shape()
         shape_color = shape.color()[0]
-        # check break point and manage the shapes
+        # check break point and manage the points
         if (shape_type == 'turtle'):
             if (shape_color == 'white'):
                 game_on = False
@@ -58,5 +59,6 @@ while game_on:
         score.update_score(points)
         shape.clear()
         shape.generate_shapes()
+        default_spead *= 0.8
 
 screen.exitonclick()
