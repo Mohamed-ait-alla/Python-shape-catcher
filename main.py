@@ -2,6 +2,7 @@ from turtle import Screen, Turtle
 from bar import Bar
 from scope import Scope
 from shape_generator import Shape
+from score import Scoreboard
 import time
 
 # window setup
@@ -14,6 +15,7 @@ screen.tracer(0)
 scope = Scope()
 bar = Bar()
 shape = Shape()
+score = Scoreboard()
 
 # event handling
 screen.listen()
@@ -29,6 +31,8 @@ while True:
         shape.generate_shapes()
     # check if a shape touch the bar
     if (bar.distance(shape) <= 40 and shape.ycor() <= -155):
+        score.is_touched = True
+        score.update_score()
         shape.clear()
         shape.generate_shapes()
 
