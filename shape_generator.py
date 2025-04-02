@@ -14,10 +14,10 @@ class Shape(Turtle):
         self.shape(random.choice(shapes_list))
         self.color(random.choice(colors_list))
         self.penup()
-        self.left(270)
+        self.left(-90)
         self.goto(random.choice(x_positions), 190)
 
     def go_down(self):
-        if (self.ycor() < -200):
-            self.hideturtle()
+        if (self.ycor() < -180):
+            self.clear()
         self.goto(self.xcor(), self.ycor() - 5)
