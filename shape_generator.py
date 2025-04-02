@@ -8,9 +8,9 @@ class Shape(Turtle):
         self.generate_shapes()
 
     def generate_shapes(self):
-        shapes_list = ["circle", "turtle", "square", "classic", "triangle", "arrow"]
+        shapes_list = ["circle", "turtle", "square", "classic", "turtle", "triangle", "arrow", "turtle"]
         x_positions = list (range(-250, 250, 15))
-        colors_list = ["red", "white", "yellow", "green", "blue", "cyan", "skyblue", "lightgreen", "light salmon", "purple"]
+        colors_list = ["red", "white", "yellow", "green", "white", "blue", "cyan", "white", "skyblue", "white", "lightgreen", "light salmon", "purple", "white"]
         self.shape(random.choice(shapes_list))
         self.color(random.choice(colors_list))
         self.penup()
