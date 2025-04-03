@@ -23,4 +23,4 @@ class Scoreboard(Turtle):
     def game_over(self):
         self.goto(0, 0)
         self.color("red")
-        self.write("Oops! Game Over", align='center', font=('courier', 20, 'bold'))
+        self.write("Oops! Game Over\n Thanks For Playing... ", align='center', font=('courier', 20, 'bold'))
